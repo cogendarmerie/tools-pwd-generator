@@ -1,0 +1,30 @@
+//Variables
+$button-padding: 12px 32px
+$button-line-height: 20px
+$button-radius: 6px
+$button-font-size: 14px
+$button-font-weight: 500
+
+//Styles
+.btn
+  display: inline-flex
+  flex-direction: row
+  align-items: center
+  font-size: $button-font-size
+  line-height: $button-line-height
+  border-radius: $button-radius
+  padding: $button-padding
+  cursor: pointer
+  text-decoration: none
+  color: $color-white
+  transition: all .25s ease
+  font-weight: $button-font-weight
+
+.btn-primary
+  color: $color-black
+  background-color: $color-white-light
+
+.btn-outline
+  border: 1px solid $color-accent
+  &:hover
+    background-color: $color-accent
