@@ -12,5 +12,45 @@ $input-border-radius: 6px
   outline: none
   transition: all .25s ease
   font-family: $font-default
+  width: 100%
   &:focus
     box-shadow: 0 0 0 2px $color-accent
+    border-color: $color-white
+
+
+// Checkbox
+.checkbox-container
+  display: flex
+  flex-direction: row
+  align-items: center
+  gap: 4px
+
+  input
+    display: none
+
+  .checkbox
+    display: inline-flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    height: 18px
+    width: 18px
+    border: 1px solid $color-accent
+    border-radius: 5px
+    margin-right: 8px
+    cursor: pointer
+    transition: all .25s ease
+
+    svg
+      transition: all .25s ease
+      color: $color-black
+      height: 14px
+      width: 14px
+
+
+  input:not(:checked) + .checkbox svg
+    opacity: 0
+
+  input:checked + .checkbox
+    background-color: $color-white
+    border-color: $color-white

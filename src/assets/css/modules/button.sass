@@ -10,6 +10,7 @@ $button-font-weight: 500
   display: inline-flex
   flex-direction: row
   align-items: center
+  gap: 4px
   font-size: $button-font-size
   line-height: $button-line-height
   border-radius: $button-radius
@@ -20,11 +21,30 @@ $button-font-weight: 500
   transition: all .25s ease
   font-weight: $button-font-weight
 
+  svg
+    height: 18px
+    width: 18px
 .btn-primary
   color: $color-black
   background-color: $color-white-light
+  &:hover
+    background-color: $color-white
+
+.btn-secondary
+  background-color: $color-accent
+  border: 1px solid $color-accent
+  &:hover
+    background-color: darken($color-accent, 4%)
+    border-color: darken($color-accent, 4%)
 
 .btn-outline
   border: 1px solid $color-accent
+  &:hover
+    background-color: $color-accent
+
+
+.btn-ghost
+  background-color: transparent
+  border: 1px solid transparent
   &:hover
     background-color: $color-accent
