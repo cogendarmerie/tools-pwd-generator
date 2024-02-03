@@ -68,7 +68,7 @@ export default function Home(){
                                       onChange={(e) => changeParams('uppercase', e.target.checked)}
                                       label={"Majuscules"} id="uppercase"/>
                         </div>
-                        <div className={"flex flex-row gap-2"}>
+                        <div className={"flex flex-col gap-2 sm:flex-row"}>
                             <button className={"btn btn-primary"}
                                     onClick={() => setPassword(randomPassword(params.length, params.numbers, params.uppercase, params.symbols))}>
                                 <ArrowPathIcon/> Actualiser
