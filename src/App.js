@@ -7,6 +7,7 @@ import {useState, useEffect} from "react";
 import Checkbox from "./components/blocks/form/checkbox";
 import {ClipboardIcon, ArrowPathIcon} from "@heroicons/react/24/outline";
 import Footer from "./components/blocks/Footer";
+import {CopyToClipboard} from "react-copy-to-clipboard";
 
 //Générer un mot de passe aléatoire
 function randomPassword(length = 16, numbers = true, uppercase = true, symbols = true) {
@@ -72,10 +73,12 @@ function App() {
                                     onClick={() => setPassword(randomPassword(params.length, params.numbers, params.uppercase, params.symbols))}>
                                 <ArrowPathIcon/> Actualiser
                             </button>
-                            <button className={"btn btn-secondary"}>
-                                <ClipboardIcon/>
-                                Copier
-                            </button>
+                            <CopyToClipboard text={password} onCopy={() => alert("Mot de passe copie !")}>
+                                <button className={"btn btn-secondary"}>
+                                    <ClipboardIcon/>
+                                    Copier
+                                </button>
+                            </CopyToClipboard>
                         </div>
                     </CardBody>
                 </Card>
